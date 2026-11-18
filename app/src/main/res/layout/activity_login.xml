@@ -1,103 +1,170 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLogin"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FBF8F5"
-    android:gravity="center"
-    android:orientation="vertical"
-    android:padding="24dp">
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    android:background="@color/background">
 
-    <TextView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/circle_bg"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:gravity="center"
-        android:text="📖"
-        android:textSize="36sp" />
+        android:padding="28dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Thư viện sách"
-        android:textColor="#3E2723"
-        android:textSize="28sp"
-        android:textStyle="bold" />
+        <!-- Logo Chuẩn App Lịch Hẹn (Phong cách Vercel Squircle) -->
+        <FrameLayout
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:background="@drawable/bg_logo_squircle">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:text="Đăng nhập để tiếp tục"
-        android:textColor="#795548" />
+            <ImageView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_calendar_event_logo"
+                android:contentDescription="Logo Lịch hẹn" />
+        </FrameLayout>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Tên đăng nhập"
-        android:textColor="#3E2723"
-        android:textStyle="bold" />
+        <!-- Tiêu đề ứng dụng -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Quản lý lịch hẹn"
+            android:textColor="@color/text_primary"
+            android:textSize="26sp"
+            android:letterSpacing="-0.02"
+            android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/etUsername"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginBottom="16dp"
-        android:background="@android:drawable/editbox_background"
-        android:hint="Nhập tên đăng nhập"
-        android:imeOptions="actionNext"
-        android:inputType="text"
-        android:maxLines="1"
-        android:padding="10dp"
-        android:singleLine="true"
-        android:textColor="#212121"
-        android:textColorHint="#757575" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Đăng nhập để tiếp tục"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Mật khẩu"
-        android:textColor="#3E2723"
-        android:textStyle="bold" />
+        <!-- Card Form Đăng nhập phong cách Vercel -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/card_border"
+            app:strokeWidth="1dp"
+            app:cardBackgroundColor="@color/surface">
 
-    <EditText
-        android:id="@+id/etPassword"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginBottom="8dp"
-        android:background="@android:drawable/editbox_background"
-        android:hint="••••••"
-        android:imeOptions="actionDone"
-        android:inputType="textPassword"
-        android:maxLines="1"
-        android:padding="10dp"
-        android:singleLine="true"
-        android:textColor="#212121"
-        android:textColorHint="#757575" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
 
-    <TextView
-        android:id="@+id/tvError"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:textColor="#D32F2F"
-        android:visibility="gone" />
+                <!-- Nhãn và Ô Tên đăng nhập -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tên đăng nhập"
+                    android:textColor="@color/text_primary"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnLogin"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:backgroundTint="#5D4037"
-        android:text="Đăng nhập"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
-        app:cornerRadius="12dp" />
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusBottomEnd="8dp"
+                    app:boxCornerRadiusBottomStart="8dp"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxCornerRadiusTopStart="8dp"
+                    app:boxStrokeColor="@color/primary"
+                    app:hintEnabled="false">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Tài khoản mẫu: admin / 123456"
-        android:textColor="#8D6E63" />
-</LinearLayout>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etUsername"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Nhập tên đăng nhập"
+                        android:inputType="text"
+                        android:padding="14dp"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Nhãn và Ô Mật khẩu -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Mật khẩu"
+                    android:textColor="@color/text_primary"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusBottomEnd="8dp"
+                    app:boxCornerRadiusBottomStart="8dp"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxCornerRadiusTopStart="8dp"
+                    app:boxStrokeColor="@color/primary"
+                    app:passwordToggleEnabled="true"
+                    app:hintEnabled="false">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Nhập mật khẩu"
+                        android:inputType="textPassword"
+                        android:padding="14dp"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Thông báo lỗi (Thành phần 3) -->
+                <TextView
+                    android:id="@+id/tvError"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:textColor="@color/danger"
+                    android:textSize="13sp"
+                    android:visibility="gone" />
+
+                <!-- Nút Đăng nhập phong cách Vercel (Thành phần 4) -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Đăng nhập"
+                    android:textColor="@color/text_white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="@color/primary"
+                    app:cornerRadius="8dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Thông tin tài khoản mẫu -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Tài khoản mẫu: admin / 123456"
+            android:textColor="@color/text_muted"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+</ScrollView>

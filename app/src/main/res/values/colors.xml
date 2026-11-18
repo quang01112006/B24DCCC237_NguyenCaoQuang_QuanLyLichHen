@@ -1,15 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Vercel Minimalist High-Contrast Palette -->
+    <color name="primary">#000000</color>
+    <color name="primary_dark">#000000</color>
+    <color name="primary_light">#F4F4F5</color>
+    <color name="primary_container">#E4E4E7</color>
+    <color name="color_accent">#0070F3</color>
 
-    <color name="book_primary">#5D4037</color>
-    <color name="book_primary_dark">#3E2723</color>
-    <color name="book_background">#FBF8F5</color>
-    <color name="book_card_bg">#FFFFFF</color>
+    <!-- Backgrounds & Surfaces -->
+    <color name="background">#FAFAFA</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_variant">#F4F4F5</color>
+    <color name="card_border">#D4D4D8</color>
+    <color name="input_border">#A1A1AA</color>
 
+    <!-- High-Contrast Typography -->
+    <color name="text_primary">#000000</color>
+    <color name="text_secondary">#27272A</color>
+    <color name="text_muted">#52525B</color> <!-- High contrast hint/subtext -->
+    <color name="text_white">#FFFFFF</color>
 
-    <color name="chip_category_bg">#EFEBE9</color>
-    <color name="chip_category_text">#6D4C41</color>
+    <!-- Reminder Chips -->
+    <color name="chip_reminder_on_bg">#000000</color>
+    <color name="chip_reminder_on_text">#FFFFFF</color>
+    <color name="chip_reminder_off_bg">#E4E4E7</color>
+    <color name="chip_reminder_off_text">#27272A</color>
 
-    <color name="chip_status_bg">#FEF3C7</color>
-    <color name="chip_status_text">#B45309</color>
+    <!-- Danger / Delete (Vercel Red) -->
+    <color name="danger">#EE0000</color>
+    <color name="danger_dark">#C50000</color>
+    <color name="danger_bg">#FFF0F0</color>
+
+    <!-- Stats Card (Vercel Pitch Black Style) -->
+    <color name="stats_card_bg">#000000</color>
+    <color name="stats_card_border">#27272A</color>
+    <color name="stats_divider">#27272A</color>
 </resources>

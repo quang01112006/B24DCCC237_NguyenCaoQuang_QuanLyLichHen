@@ -1,18 +1,31 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.BaiThucHanh1" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <!-- Đặt màu chữ mặc định toàn app là màu đen/xám đậm -->
-        <item name="android:textColor">#212121</item>
-        <item name="android:editTextColor">#212121</item>
-        <item name="android:textColorHint">#757575</item>
+    <!-- Base application theme: Force Light to avoid Dark Mode washed-out text on white cards -->
+    <style name="Base.Theme.BaiThucHanh1" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/text_white</item>
+        <item name="colorSecondary">@color/color_accent</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:statusBarColor">@color/background</item>
+        <item name="android:windowLightStatusBar">true</item>
 
-    </style>
-    <style name="RatingBarYellow" parent="Theme.AppCompat">
-        <!-- Màu ngôi sao được đánh giá (Màu vàng cam) -->
-        <item name="colorControlActivated">#D97706</item>
-        <!-- Màu ngôi sao chưa đánh giá (Màu xám rõ nét) -->
-        <item name="colorControlNormal">#9E9E9E</item>
+        <!-- High contrast typography -->
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        <item name="android:editTextColor">@color/text_primary</item>
+        <item name="android:textColorHint">@color/text_muted</item>
     </style>
 
     <style name="Theme.BaiThucHanh1" parent="Base.Theme.BaiThucHanh1" />
+
+    <!-- Dedicated high-contrast theme for DatePicker & TimePicker spinner wheels -->
+    <style name="PickerTheme" parent="Theme.MaterialComponents.Light">
+        <item name="android:textColorPrimary">#000000</item>
+        <item name="android:textColorSecondary">#52525B</item>
+        <item name="android:editTextColor">#000000</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:colorControlNormal">#000000</item>
+        <item name="android:colorControlActivated">#000000</item>
+    </style>
 </resources>
